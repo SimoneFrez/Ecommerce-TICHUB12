@@ -2,9 +2,9 @@
   "name": "ecommerce",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.ts",
   "scripts": {
-    "start": "ts-node src/index.ts",
+    "start": "ts-node src/main.ts",
     "dev": "vite",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,8 +13,12 @@
   "license": "ISC",
   "type": "module",
   "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3",
     "vite": "^8.0.0"
+  },
+  "dependencies": {
+    "vue": "^3.5.30"
   }
 }

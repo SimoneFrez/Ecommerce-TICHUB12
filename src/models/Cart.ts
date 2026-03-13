@@ -1,4 +1,4 @@
-import { Product, CartItem} from './types';
+import { Product, CartItem} from './types.js';
 
 export class Cart {
     private items: CartItem[] = [];
