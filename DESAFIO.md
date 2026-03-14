@@ -84,3 +84,35 @@ Para tornar o código mais declarativo e performático, substituímos laços de 
 - **UX Inicial**: O usuário recebe feedback imediato (atualização do total e da lista lateral) ao interagir com os botões de compra.
 
 
+---
+##  Exercício 3: UI Profissional com PrimeVue & Tailwind
+
+###  Estilização Utilitária (Tailwind CSS)
+- **Layout Responsivo**: Implementamos um sistema de Grid (`grid-cols-1 md:grid-cols-3`) que se adapta automaticamente de celulares para desktops.
+- **Design Tokens**: Substituímos o CSS manual por classes de espaçamento (`p-8`, `gap-6`) e tipografia do Tailwind, garantindo consistência visual.
+
+###  Componentes de Interface (PrimeVue)
+- **Componentes Ricos**: Integramos o PrimeVue para utilizar elementos complexos como o `<Card>` e o `<InputNumber>`. 
+- **Experiência de Usuário (UX)**: O carrinho agora permite ajuste fino de quantidade através de botões de incremento/decremento nativos, melhorando a interação.
+
+###  Configuração de Build
+- **Plugin Integration**: Configuramos o Vite para processar o plugin do PrimeVue e as diretivas de post-processamento do Tailwind.
+
+---
+##  Refinamento de Usabilidade (UX)
+
+###  Comunicação Visual
+- **Ícones de Ação**: Substituímos o botão de exclusão circular, que causava ambiguidade, por um botão contendo o ícone universal de lixeira (`pi pi-trash`).
+- **Nível de Contraste**: Alteramos o estilo do botão para `outlined`, garantindo que a borda e o ícone sejam perfeitamente visíveis contra o fundo branco, resolvendo o problema de transparência anterior.
+
+# Relatório de Entrega - Exercício 3
+
+##  Objetivos Alcançados
+- **UI Premium**: Implementação do PrimeVue com tema Aura.
+- **Styling**: Configuração completa do Tailwind CSS v4 via PostCSS.
+- **Componentes**: Uso de InputNumber para controle de estoque e Cards para exibição de produtos.
+
+##  Desafios Superados
+- Resolvido erro de execução do Tailwind no PowerShell usando `npm exec`.
+- Corrigido conflito de plugins do PostCSS com a instalação de `@tailwindcss/postcss`.
+- Melhorada a visibilidade do botão de exclusão de "transparente" para `outlined danger` com ícone de lixeira.

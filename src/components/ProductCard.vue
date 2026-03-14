@@ -1,23 +1,26 @@
 <template>
-  <div class="product-card">
-    <h3>{{ product.name }}</h3>
-    <p>Categoria: {{ product.category.name }}</p>
-    <p>Preço: R$ {{ product.price.toFixed(2) }}</p>
-    <button @click="$emit('add', product)">Adicionar ao Carrinho</button>
-  </div>
+  <Card class="shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+    <template #title> {{ product.name }} </template>
+    <template #subtitle> {{ product.category.name }} </template>
+    <template #content>
+      <p class="text-2xl font-bold text-green-600">R$ {{ product.price.toFixed(2) }}</p>
+    </template>
+    <template #footer>
+      <Button icon="pi pi-shopping-cart" label="Adicionar" class="w-full" @click="$emit('add', product)" />
+    </template>
+  </Card>
 </template>
 
 <script lang="ts">
 import { defineComponent, PropType } from 'vue';
-import { Product } from '../types'; 
+import Card from 'primevue/card';
+import Button from 'primevue/button';
+import { Product } from '../models/types.js';
 
 export default defineComponent({
-  name: 'ProductCard',
-  props: {    
-    product: {
-      type: Object as PropType<Product>,
-      required: true
-    }
+  components: { Card, Button },
+  props: {
+    product: { type: Object as PropType<Product>, required: true }
   }
 });
 </script>
